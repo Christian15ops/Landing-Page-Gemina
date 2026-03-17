@@ -45,12 +45,31 @@
   .nav-cta { background:var(--sky) !important; color:var(--white) !important; border-radius:6px !important; }
   .nav-cta:hover { background:var(--sky-dark) !important; }
 
+  /* URL BAR */
+  .url-bar {
+    background: rgba(20,10,14,0.92);
+    border-bottom: 1px solid rgba(58,176,224,0.35);
+    display: flex; align-items: center; justify-content: center;
+    gap: 12px; padding: 8px 20px;
+    position: fixed; top: 66px; left: 0; right: 0; z-index: 99;
+    backdrop-filter: blur(8px);
+  }
+  .url-bar-label { font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.45); }
+  .url-bar-link {
+    display:inline-flex; align-items:center; gap:8px;
+    background:rgba(58,176,224,0.14); border:1px solid rgba(58,176,224,0.45);
+    border-radius:20px; padding:5px 18px;
+    color:var(--sky-light); font-size:13.5px; font-weight:700;
+    text-decoration:none; letter-spacing:0.3px; transition:all 0.2s;
+  }
+  .url-bar-link:hover { background:rgba(58,176,224,0.28); color:#fff; border-color:var(--sky-light); transform:none; }
+
   /* HERO */
   .hero {
     min-height:100vh;
     background:linear-gradient(140deg, #3d0b16 0%, var(--maroon) 40%, #1a3a5c 100%);
     display:flex; align-items:center; justify-content:center;
-    padding:100px 40px 60px; position:relative; overflow:hidden;
+    padding:120px 40px 60px; position:relative; overflow:hidden;
   }
   .hero::before {
     content:''; position:absolute; inset:0;
@@ -250,6 +269,14 @@
     <li><a href="https://msumcest.edu.ph/" target="_blank" class="nav-cta">Visit Official Site</a></li>
   </ul>
 </nav>
+<!-- URL BAR -->
+<div class="url-bar">
+  <span class="url-bar-label">Official Website</span>
+  <a class="url-bar-link" href="https://msumcest.edu.ph/" target="_blank">
+    <span class="globe">🌐</span> https://msumcest.edu.ph/
+  </a>
+</div>
+
 
 <!-- HERO -->
 <section class="hero" id="home">
@@ -447,7 +474,7 @@
       <div class="contact-card">
         <div class="cc-icon">✉️</div>
         <div class="cc-label">Email</div>
-        <div class="cc-value">info@msumcest.edu.ph</div>
+        <div class="cc-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0f666169604f627c7a626c6a7c7b216a6b7a217f67">[email&#160;protected]</a></div>
       </div>
       <div class="contact-card">
         <div class="cc-icon">🌐</div>
@@ -464,7 +491,7 @@
   </div>
 </section>
 
-<!-- FOOTER  -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-brand">
     © 2026 <strong>MSU–MCEST</strong> · Mindanao State University Maigo College of Education Science and Technology
@@ -472,10 +499,4 @@
   <div class="footer-links">
     <a href="https://msumcest.edu.ph/" target="_blank">Home</a>
     <a href="https://msumcest.edu.ph/pages/academics/departments.php" target="_blank">Departments</a>
-    <a href="https://msumcest.edu.ph/" target="_blank">Admissions</a>
-    <a href="https://www.facebook.com/MSUMaigoCIPP/" target="_blank">Facebook</a>
-  </div>
-</footer>
-
-</body>
-</html>
+    <a href="https://msumcest.edu.ph/" target="_blank">Admission
